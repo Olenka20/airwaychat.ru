@@ -78,7 +78,7 @@ function showFlashMessage(name, status) {
     const msgHTML = `
     <div class="msg-flash">
         <div class="msg-bubble flash-${status}">
-            <p class="msg-info">${name} ${status} the room.<p>
+            <p class="msg-info">${name} ${status} the chat.<p>
         </div>
     </div>
   `;
