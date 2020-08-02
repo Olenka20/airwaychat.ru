@@ -122,12 +122,14 @@
   .flash-joined {
     background: #99cc33;
     color:white;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
   .flash-left {
     background: #ff9966;
     color:white;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
   .right-msg .msg-img {
     margin: 0 0 0 10px;
