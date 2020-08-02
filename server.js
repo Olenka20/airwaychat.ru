@@ -20,7 +20,6 @@ server.listen(port, () => {
 });
 
 io.on('connection', socket => {
-    console.log('joined')
     socket.on('room', data => {
         let {name , room} = data;
         if(!rooms[room]) {
@@ -46,7 +45,6 @@ io.on('connection', socket => {
     });
 
     socket.on('disconnect', () => {
-        console.log('disconnected')
         try {
             let {name, room} = players[socket.id];
             delete players[socket.id];
