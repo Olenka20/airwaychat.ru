@@ -1,0 +1,16 @@
+{
+  "name": "mochat",
+  "version": "1.0.0",
+  "description": "Online-Multiplayer card game.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Akash S Panickar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
