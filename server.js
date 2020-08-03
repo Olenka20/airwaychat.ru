@@ -21,27 +21,31 @@ server.listen(port, () => {
 
 io.on('connection', socket => {
     socket.on('room', data => {
-        let {name , room} = data;
-        if(!rooms[room]) {
-            rooms[room] = {
-                players: [socket.id]
+        try {
+            let {name , room} = data;
+            if(!rooms[room]) {
+                rooms[room] = {
+                    players: [socket.id]
+                }
+            } else {
+                rooms[room].players.push(socket.id);
             }
-        } else {
-            rooms[room].players.push(socket.id);
-        }
 
-        socket.join(room);
-        players[socket.id] = {
-            name,
-            room
-        }
+            socket.join(room);
+            players[socket.id] = {
+                name,
+                room
+            }
 
-        io.to(room).emit('status', {'status': 'joined', 'name': name});
+            io.to(room).emit('status', {'status': 'joined', 'name': name});
+        } catch {}
     });
 
     socket.on('msg', msg => {
-        let {name, room} = players[socket.id];
-        socket.broadcast.to(room).emit('msg', {name, msg});
+        try {
+            let {name, room} = players[socket.id];
+            socket.broadcast.to(room).emit('msg', {name, msg});
+        } catch {}
     });
 
     socket.on('disconnect', () => {
