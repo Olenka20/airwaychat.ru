@@ -4,6 +4,8 @@ const server = require('http').Server(app);
 const {join} = require('path');
 const io = require('socket.io')(server);
 
+io.set('transports', ['websocket']);
+
 const port = process.env.PORT || 5000;
 
 let rooms = {};
@@ -25,7 +27,8 @@ io.on('connection', socket => {
             let {name , room} = data;
             if(!rooms[room]) {
                 rooms[room] = {
-                    players: [socket.id]
+                    players: [socket.id],
+                    msgCount: 1
                 }
             } else {
                 rooms[room].players.push(socket.id);
@@ -45,6 +48,11 @@ io.on('connection', socket => {
         try {
             let {name, room} = players[socket.id];
             socket.broadcast.to(room).emit('msg', {name, msg});
+
+            rooms[room].msgCount += 1;
+            if(rooms[room].msgCount % 20 == 0) {
+                io.to(room).emit('bot');
+            }
         } catch {}
     });
 
@@ -55,9 +63,10 @@ io.on('connection', socket => {
             if(rooms[room].players.length == 1) {
                 delete rooms[room];
             } else {
+                rooms[room].msgCount = 1;
                 rooms[room].players = rooms[room].players.filter(id => id != socket.id);
             }
-            io.to(room).emit('status', {'status': 'left', 'name': name});
+            socket.broadcast.to(room).emit('status', {'status': 'left', 'name': name});
             socket.disconnect(true);
         } catch {}
     });

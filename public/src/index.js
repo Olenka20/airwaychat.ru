@@ -7,12 +7,13 @@ const msgerChat = document.querySelector(".msger-chat");
 
 const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
 const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
-const BOT_NAME = "BOT";
+const BOT_NAME = "MochazBot";
 
-let ROOM = null;
-let PERSON_NAME = null;
+let ROOM, PERSON_NAME;
 
 window.onload = function() {
+  ROOM = null;
+  PERSON_NAME = null;
   authModel.style.display = 'block';
 }
 
@@ -24,19 +25,36 @@ btn.onclick = function() {
 }
 
 function startChatAPI() {
-  const socket = io();
+  const socket = io({transports: ['websocket']});
   socket.emit('room', {'name': PERSON_NAME, 'room': ROOM});
 
   socket.on('msg', data => {
       let {name, msg} = data;
-      console.log(name, msg);
       appendMessage(name, PERSON_IMG, "left", msg);
   });
+
+  socket.on('bot', () => {
+    msg = `Have some fun.🤪 Here's some super cool <b>GAMES</b> !
+    <br>
+    <br>
+    1️⃣ <b><a href="https://numberoli.herokuapp.com/">Numberoli</a></b>
+    <br>
+    2️⃣ <b><a href="http://mochatek.github.io/">Glyphy</a></b>`
+    appendMessage(BOT_NAME, BOT_IMG, "left", msg);
+});
 
   socket.on('status', data => {
       let {status, name} = data;
       showFlashMessage(name, status);
   });
+
+  socket.on('disconnect', () => {
+    showFlashMessage('You', 'left');
+    let tID = setTimeout(function() {
+      clearTimeout(tID);
+      location.reload();
+    }, 2000);
+});
 
 
   msgerForm.addEventListener("submit", event => {
