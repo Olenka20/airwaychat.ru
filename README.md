@@ -9,7 +9,7 @@ View the live demo: [Mochat](https://moochat.herokuapp.com/)
 
 Download and Install [Node.js](https://nodejs.org/en/download/)
 
-Use [npm]() to install the dependancies.
+Use [npm]() to install the dependencies.
 
 ```bash
 npm install
