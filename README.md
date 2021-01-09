@@ -11,7 +11,7 @@ Download and Install [Node.js](https://nodejs.org/en/download/)
 
 Use [npm]() to install the dependancies.
 
-```
+```bash
 npm install
 ```
 
@@ -19,12 +19,7 @@ npm install
 
 Run any of the following commands to start the application.
 
-```
-npm start
-```
-```
-node server
-```
+`npm install` or `node server.js`
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
