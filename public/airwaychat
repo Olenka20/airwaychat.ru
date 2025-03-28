@@ -28,7 +28,7 @@
     <section class="msger">
         <header class="msger-header">
             <div class="msger-header-title">
-                <i class="fas fa-comment-alt"></i> <h3><a href="https://github.com/airwaychat.ru" style="text-decoration: none; color:black">❤️ airwaychat !</a></h3>
+                <i class="fas fa-comment-alt"></i> <h3><a href="https://airwaychat.ru" style="text-decoration: none; color:black">❤️ airwaychat !</a></h3>
             </div>
             <div class="msger-header-options">
                 <span><i class="fas fa-cog"></i></span>
@@ -42,7 +42,7 @@
 
                 <div class="msg-bubble">
                     <div class="msg-info">
-                        <div class="msg-info-name">airwaychat</div>
+                        <div class="msg-info-name">airwaychat.ru</div>
                     </div>
 
                     <div class="msg-text">
