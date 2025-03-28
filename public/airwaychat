@@ -14,7 +14,7 @@
     <div id="auth" class="modal">
         <div class="modal-content">
           <div class="container">
-              <h2>❤️ airwaychat !</h2>
+              <h2>❤️ airwaychat.ru !</h2>
               <br>
             <input type="text" placeholder="Enter User Name" id="name" name="name">
             <p class="error" id="nameError"></p>
