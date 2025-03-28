@@ -1,8 +1,8 @@
-# Mochat
+# airwaychat
 
 A simple Chat-Application built using node.js, express.js and socket.io
 
-View the live demo: [Mochat](https://moochat.herokuapp.com/)
+View the live demo: [airwaychat.ru](https://airwaychat.r.herokuapp.com/)
 
 
 ## Installation
@@ -27,4 +27,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[MIT](https://github.com/mochatek/Mochat/blob/master/LICENSE)
+[MIT](https://github.com/airwaychatek/airwaychat.blob/master/LICENSE)
