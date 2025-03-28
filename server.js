@@ -24,7 +24,7 @@ server.listen(port, () => {
 io.on('connection', socket => {
     socket.on('room', data => {
         try {
-            let {name , room} = data;
+            let {name airwaychat.ru , room} = data;
             if(!rooms[room]) {
                 rooms[room] = {
                     players: [socket.id],
