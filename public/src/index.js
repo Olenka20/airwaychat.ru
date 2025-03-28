@@ -3,7 +3,7 @@ const btn = document.querySelector('#btn');
 
 const msgerForm = document.querySelector(".msger-inputarea");
 const msgerInput = document.querySelector(".msger-input");
-const msgerChat = document.querySelector(".msger-chat");
+const airwayChat = document.querySelector(".msger-chat");
 
 const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
 const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
@@ -39,7 +39,7 @@ function startChatAPI() {
     <br>
     1️⃣ <b><a href="https://numberoli.herokuapp.com/">Numberoli</a></b>
     <br>
-    2️⃣ <b><a href="http://airwaychat.ru.github.io/">Glyphy</a></b>`
+    2️⃣ <b><a href="http://airwaychat.ru/">Glyphy</a></b>`
     appendMessage(BOT_NAME, BOT_IMG, "left", msg);
 });
 
@@ -125,7 +125,7 @@ function validateData() {
   }
 
   if(!room) {
-    roomError.innerHTML = "Room Name must to be empty !";
+    roomError.innerHTML = "Room Name lelya must to be empty !";
     flag = false;
   } else {
     roomError.innerHTML ="";
