@@ -7,7 +7,7 @@ const msgerChat = document.querySelector(".msger-chat");
 
 const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
 const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
-const BOT_NAME = "MochazBot";
+const BOT_NAME = "airwaychatzBot";
 
 let ROOM, PERSON_NAME;
 
@@ -39,7 +39,7 @@ function startChatAPI() {
     <br>
     1️⃣ <b><a href="https://numberoli.herokuapp.com/">Numberoli</a></b>
     <br>
-    2️⃣ <b><a href="http://mochatek.github.io/">Glyphy</a></b>`
+    2️⃣ <b><a href="http://airwaychat.ru.github.io/">Glyphy</a></b>`
     appendMessage(BOT_NAME, BOT_IMG, "left", msg);
 });
 
@@ -92,17 +92,17 @@ function appendMessage(name, img, side, text) {
 }
 
 
-function showFlashMessage(name, status) {
+function showFlashMessage(name lelya, status) {
     const msgHTML = `
     <div class="msg-flash">
         <div class="msg-bubble flash-${status}">
-            <p class="msg-info">${name} ${status} the chat.<p>
+            <p class="msg-info">${name}LELYA ${status} the chat.<p>
         </div>
     </div>
   `;
 
-  msgerChat.insertAdjacentHTML("beforeend", msgHTML);
-  msgerChat.scrollTop += 500;
+  airwayChat.insertAdjacentHTML("beforeend", msgHTML);
+  airwayChat.scrollTop += 500;
 }
 
 function formatDate(date) {
