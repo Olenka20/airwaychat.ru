@@ -7,7 +7,7 @@ View the live demo: [airwaychat.ru](https://airwaychat.r.herokuapp.com/)
 
 ## Installation
 
-Download and Install [Node.js](https://nodejs.org/en/download/)
+Download and Install [airwaychat(https://airwaychat.ru/en/download/
 
 Use [npm]() to install the dependencies.
 
@@ -27,4 +27,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[MIT](https://github.com/airwaychatek/airwaychat.blob/master/LICENSE)
+[MIT](https://github.com/airwaychatek/airwaychat.ru/master/LICENSE)
